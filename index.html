@@ -1,65 +1,191 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" class="h-full">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KhanhMyWedding</title>
-    <style>
-        body,
-        html {
-            height: 100%;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f0f0;
-            /* Fallback color */
-            background-image: url('background.png');
-            /* background-repeat: no-repeat; */
-            background-size: contain, cover;
-            background-position: center;
-        }
-
-        .content {
-            background-color: rgba(255, 255, 255, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            font-size: 18px;
-            color: white;
-            background-color: #ff69b4;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #ff1493;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div class="container">
-        <div class="content">
-            <h1>Comming soon...</h1>
-        </div>
+<body class="font-sans bg-gray-100 bg-[url('./images/background.png')] bg-contain bg-center">
+    <div class="h-full flex justify-center items-center p-4 lg:p-8">
+        <div class="bg-white bg-opacity-80 p-8 rounded-xl lg:rounded-3xl shadow-2xl text-center ">
+            <h1 class="text-5xl lg:text-6xl font-script text-amber-700 mb-4">Khánh & My</h1>
+            <p class="text-2xl mb-8 text-gray-700 font-light">Trân trọng kính mời bạn đến chung vui trong ngày cưới của
+                chúng tôi</p>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+                <div class="h-fit p-4 bg-white bg-opacity-50 rounded-lg shadow-md text-center">
+                    <h2 class="text-3xl font-bold mb-4 text-amber-600">Nhà trai</h2>
+
+                    <h2 class="text-2xl font-semibold text-amber-600">Tiệc cưới</h2>
+                    <p><i class="fas fa-calendar-alt text-amber-500 mr-2"></i>Ngày 12 tháng 10 năm 2024</p>
+                    <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i>Xóm 5 - Đại Lan - Duyên Hà - Thanh Trì -
+                        Hà Nội</p>
+                    <a class="text-blue-500 hover:text-blue-700 transition-colors duration-300"
+                        href="https://maps.app.goo.gl/HigkZogKeLBFT6kW8" target="_blank">Google Map</a>
+                    <div class="flex justify-center items-center mt-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3726.70507465617!2d105.87572!3d20.924182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDU1JzI3LjEiTiAxMDXCsDUyJzMyLjYiRQ!5e0!3m2!1svi!2s!4v1727983607385!5m2!1svi!2s"
+                            class="w-full h-auto" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg"></iframe>
+                    </div>
+                    <h2 class="text-2xl font-semibold mt-6 text-amber-600">Lễ Cưới</h2>
+                    <p><i class="fas fa-calendar-alt text-amber-500 mr-2"></i> Ngày 13 tháng 10 năm 2024</p>
+                    <p><i class="fas fa-clock text-amber-500 mr-2"></i>16:00</p>
+                    <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i>Xóm 5 - Đại Lan - Duyên Hà -
+                        Thanh Trì - Hà Nội</p>
+                </div>
+
+                <div class="col-span-1 bg-white rounded-lg shadow-md">
+                    <div class="relative mx-auto overflow-hidden rounded-lg shadow-lg">
+                        <div class="flex transition-transform duration-700 ease-in-out h-full" id="slider">
+                            <img src="./images/1.jpg" alt="Ảnh cưới 1"
+                                class="w-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-1000">
+                            <img src="./images/2.jpg" alt="Ảnh cưới 2"
+                                class="w-full object-cover opacity-80 hover:opacity-100 transition-opacity duration-1000">
+                        </div>
+                        <button
+                            class="absolute top-1/2 left-1 transform -translate-y-1/2 bg-white bg-opacity-30 text-gray-800 p-2 rounded-full cursor-pointer text-xl transition-colors duration-300 hover:bg-opacity-90"
+                            onclick="changeSlide(-1)">&#10094;</button>
+                        <button
+                            class="absolute top-1/2 right-1 transform -translate-y-1/2 bg-white bg-opacity-30 text-gray-800 p-2 rounded-full cursor-pointer text-xl transition-colors duration-300 hover:bg-opacity-90"
+                            onclick="changeSlide(1)">&#10095;</button>
+                    </div>
+
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-semibold mb-2 text-amber-600">Xác nhận tham dự</h3>
+                        <p class="mb-4">Vui lòng phản hồi trước ngày 6 tháng 10 năm 2024</p>
+                        <div class="space-y-2 my-1 mx-2 2xl:mx-12">
+                            <button
+                                class="w-full bg-amber-500 text-white px-3 py-2 rounded-full hover:bg-amber-600 transition-colors duration-300"
+                                onclick="openRSVPForm('yes'); document.getElementById('formTitle').textContent = 'Xác nhận tham dự';"">Sẽ tham dự</button>
+                            <button
+                                class=" w-full bg-gray-300 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-400
+                                transition-colors duration-300"
+                                onclick="openRSVPForm('no'); document.getElementById('formTitle').textContent = 'Xác nhận không tham dự';">Tiếc
+                                không thể tham dự</button>
+
+                            <div id="rsvpFormModal"
+                                class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+                                <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                                    <button onclick="closeRSVPForm()"
+                                        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
+                                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                    <script>
+                                        function closeRSVPForm() {
+                                            document.getElementById('rsvpFormModal').classList.add('hidden');
+                                        }
+                                    </script>
+                                    <h3 id="formTitle" class="text-lg font-medium leading-6 text-gray-900 mb-4">Xác nhận
+                                        tham dự</h3>
+                                    <form id="rsvpForm"
+                                        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeqweSqxCvTFKCnVnidQf8LjO64tIcpFsjImb9o69j4mWntYw/formResponse"
+                                        method="POST" target="hidden_iframe">
+                                        <input type="hidden" name="entry.704845063" id="rsvpResponse" value="">
+                                        <div class="mb-4">
+                                            <label for="name" class="block text-sm font-medium text-gray-700">Họ và tên - nhà trai | nhà gái</label>
+                                            <input type="text" name="entry.704845063" id="name" required
+                                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-amber-500 focus:ring focus:ring-amber-500 focus:ring-opacity-50">
+                                        </div>
+                                        <div class="mt-4">
+                                            <button type="submit"
+                                                class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-amber-600 text-base font-medium text-white hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500">
+                                                Gửi
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+                            <script>
+                                function openRSVPForm(response) {
+                                    document.getElementById('rsvpResponse').value = response;
+                                    document.getElementById('rsvpFormModal').classList.remove('hidden');
+                                }
+
+                                document.getElementById('rsvpForm').addEventListener('submit', function (e) {
+                                    e.preventDefault();
+                                    this.submit();
+                                    setTimeout(function () {
+                                        document.getElementById('rsvpFormModal').classList.add('hidden');
+                                        alert('Cảm ơn bạn đã phản hồi!');
+                                    }, 1000);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-fit p-4 bg-white bg-opacity-50 rounded-lg shadow-md">
+                    <h2 class="text-3xl font-bold mb-4 text-amber-600">Nhà gái</h2>
+
+                    <h2 class="text-2xl font-semibold text-amber-600">Tiệc cưới</h2>
+                    <p><i class="fas fa-calendar-alt text-amber-500 mr-2"></i>Ngày 12 tháng 10 năm 2024</p>
+                    <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i>Số 184 Tân Thư - Kim Thư - Thanh Oai -
+                        Hà Nội</p>
+                    <a class="text-blue-500 hover:text-blue-700 transition-colors duration-300"
+                        href="https://maps.app.goo.gl/JGxKRqwP3FJ7A3s39" target="_blank">Google
+                        Map</a>
+                    <div class="flex justify-center items-center mt-4">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1108.5578230170722!2d105.7706197948918!3d20.84263902171093!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDUwJzMzLjIiTiAxMDXCsDQ2JzEzLjkiRQ!5e0!3m2!1svi!2sus!4v1727983373806!5m2!1svi!2sus"
+                            class="w-full h-auto" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg"></iframe>
+                    </div>
+                    <h2 class="text-2xl font-semibold mt-6 text-amber-600">Lễ Cưới</h2>
+                    <p><i class="fas fa-calendar-alt text-amber-500 mr-2"></i> Ngày 13
+                        tháng 10 năm 2024</p>
+                    <p><i class="fas fa-clock text-amber-500 mr-2"></i>14:30</p>
+                    <p><i class="fas fa-map-marker-alt text-amber-500 mr-2"></i>Số 184
+                        Tân Thư - Kim Thư - Thanh
+                        Oai - Hà Nội</p>
+                </div>
+            </div>
+
+            <div class="mt-8 border-t border-amber-200 pt-6">
+                <h3 class="text-xl font-semibold mb-2 text-amber-600">Lời cảm ơn</h3>
+                <p class="mb-4 italic">"Chúng tôi xin chân thành cảm ơn sự hiện diện của quý vị trong ngày trọng đại này."</p>
+                <p class="text-sm italic">Sự hiện diện của quý vị là món quà quý giá nhất đối với chúng tôi.</p>
+            </div>
+
+            <div class="mt-8 text-sm text-gray-600">
+                <p>khanhmywedding.com</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script>
+        var currentSlide = 0;
+        var slides = document.querySelectorAll('#slider img');
+        var sliderInterval;
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            document.getElementById('slider').style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function rsvp(response) {
+            alert(`Thank you for your response: ${response}`);
+            // Here you would typically send this response to a server
+        }
+
+        function startSliderInterval() {
+            sliderInterval = setInterval(() => changeSlide(1), 5000);
+        }
+
+        startSliderInterval();
+
+        document.querySelector('#slider').parentElement.addEventListener('mouseover', () => clearInterval(sliderInterval));
+        document.querySelector('#slider').parentElement.addEventListener('mouseout', startSliderInterval);
+    </script>
 </body>
+
+</html>
